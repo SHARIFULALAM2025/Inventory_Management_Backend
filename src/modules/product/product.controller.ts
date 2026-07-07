@@ -62,7 +62,7 @@ export const getProducts = asyncHandler(
 
 export const getProductById = asyncHandler(
   async (req: AuthRequest, res: Response) => {
-    const product = await getProductByIdService(req.params.id)
+    const product = await getProductByIdService(req.params.id as string)
     const response = new ApiResponse(
       200,
       product,
@@ -75,7 +75,7 @@ export const getProductById = asyncHandler(
 export const updateProduct = asyncHandler(
   async (req: AuthRequest, res: Response) => {
     const product = await updateProductService(
-      req.params.id,
+      req.params.id as string,
       req.body,
       req.file?.buffer
     )
@@ -90,7 +90,7 @@ export const updateProduct = asyncHandler(
 
 export const deleteProduct = asyncHandler(
   async (req: AuthRequest, res: Response) => {
-    await deleteProductService(req.params.id)
+    await deleteProductService(req.params.id as string)
     const response = new ApiResponse(200, null, 'Product deleted successfully')
     res.status(response.statusCode).json(response)
   }
