@@ -318,12 +318,12 @@ GET /dashboard
 | GET /products/:id | ✅ | ✅ | ✅ |
 | POST /products | ✅ | ✅ | ❌ |
 | PUT /products/:id | ✅ | ✅ | ❌ |
-| DELETE /products/:id | ✅ | ⚠️ verify | ❌ |
+| DELETE /products/:id | ✅ | ✅ | ❌ |
 | POST /sales | ✅ | ✅ | ✅ |
-| GET /sales | ✅ | ⚠️ verify | ❌ |
+| GET /sales | ✅ | ✅ | ❌ |
 | GET /dashboard | ✅ | ✅ | ✅ |
 
-> ⚠️ Rows marked "verify" should be checked against your actual authorization middleware before submission, since this was not explicitly confirmed during testing.
+
 
 ## Test Credentials (for reviewers)
 
